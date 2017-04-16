@@ -8,7 +8,6 @@ tmp
 # Build Files/Folders
 # --------------------
 build/
-dist/
 .grunt
 .lock-wscript
 
