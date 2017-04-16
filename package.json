@@ -1,6 +1,6 @@
 {
   "name": "shadowrun-fifth-battle",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A battle tracker for shadowrun fifth edition.",
   "private": true,
   "engines": {
@@ -10,8 +10,7 @@
     "preinstall": "node tools/nodeVersionCheck.js",
     "setup": "node tools/setup/setupMessage.js && npm install && node tools/setup/setup.js",
     "remove-demo": "./node_modules/.bin/babel-node tools/removeDemo.js",
-    "start-message": "./node_modules/.bin/babel-node tools/startMessage.js",
-    "prestart": "./node_modules/.bin/npm-run-all --parallel start-message remove-dist",
+    "prestart": "npm run remove-dist",
     "start": "./node_modules/.bin/npm-run-all --parallel open:src lint:watch",
     "open:src": "./node_modules/.bin/babel-node tools/srcServer.js",
     "open:dist": "./node_modules/.bin/babel-node tools/distServer.js",
