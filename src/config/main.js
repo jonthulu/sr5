@@ -6,10 +6,10 @@ const setupVars = process.env || {};
 
 export default {
   env: env,
-  host: setupVars.HOST || 'http://0.0.0.0',
+  host: setupVars.HOST || 'https://0.0.0.0',
   port: setupVars.PORT || 3060,
 
   server: {
-    baseUrl: setupVars.BACKEND_URL || 'http://0.0.0.0:3061',
+    baseUrl: setupVars.BACKEND_URL || 'https://0.0.0.0:3061',
   }
 };

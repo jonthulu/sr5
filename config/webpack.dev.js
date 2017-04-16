@@ -55,7 +55,7 @@ export default webpackMerge(commonConfig, {
 
     // Use absolute paths to avoid the way that URLs are resolved by Chrome when they're parsed from a
     // dynamically loaded CSS blob. Note: Only necessary in Dev.
-    publicPath: 'http://0.0.0.0:' + process.env.PORT + '/',
+    publicPath: 'https://0.0.0.0:' + process.env.PORT + '/',
 
     filename: '[name].bundle.js',
 

@@ -16,13 +16,15 @@ import config from '../config/webpack.dev.js';
 
 const bundler = webpack(config);
 
+const port = process.env.PORT || 3060;
+
 // Run Browsersync and use middleware for Hot Module Replacement
 browserSync({
   host: '0.0.0.0',
   open: 'external',
-  port: process.env.PORT || 3060,
+  port: port,
   ui: {
-    port: 3001,
+    port: port + 1,
   },
   server: {
     baseDir: 'src',
