@@ -16,7 +16,7 @@ const port = process.env.PORT || 3060;
 browserSync({
   port: port,
   ui: {
-    port: port + 1,
+    port: 3001,
   },
   server: {
     baseDir: 'dist',
