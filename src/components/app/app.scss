@@ -1,0 +1,12 @@
+@import "variables/_theme";
+
+/* Styles */
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background-color: $body-bg-color;
+  color: $body-color;
+}

@@ -1,0 +1,102 @@
+# --------------------
+# App Specific Files/Folders
+# --------------------
+tmp
+.env
+
+# --------------------
+# Build Files/Folders
+# --------------------
+build/
+dist/
+.grunt
+.lock-wscript
+
+# --------------------
+# Log Files
+# --------------------
+logs
+*.log*
+
+# --------------------
+# Coverage Files
+# --------------------
+lib-cov
+coverage
+
+# --------------------
+# Bower Files
+# --------------------
+.bower-*/
+bower_components/
+bower_components/*
+
+# --------------------
+# Node Files
+# --------------------
+.nodemonignore
+npm-debug.log
+node_modules/
+/node_modules/.bin/*
+
+# --------------------
+# SASS Files
+# --------------------
+.sass-cache/
+
+# --------------------
+# Run-time Files
+# --------------------
+pids
+*.pid
+*.seed
+
+# --------------------
+# OSX Files
+# --------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# --------------------
+# Eclipse or Nodeclipse "Enide Studio" Files
+# --------------------
+# recommended to add to Git SCM
+# or generate with `nodeclipse -p` command
+.project
+.settings/
+.*.md.html
+
+# --------------------
+# IntelliJ Files
+# --------------------
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# --------------------
+# Netbeans Files
+# --------------------
+nbproject/private/
+nbbuild/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# --------------------
+# vim Files
+# --------------------
+*.swp
+files
+file
+
+# --------------------
+# CodeKit
+# --------------------
+config.codekit
+/min

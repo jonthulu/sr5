@@ -1,0 +1,56 @@
+@import "variables/_theme";
+
+.tracker-page {
+  .pass-display {
+    margin-bottom: 0;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .add-char-button {
+    margin-bottom: 0;
+  }
+
+  tr.active {
+    background-color: lightyellow;
+  }
+  tr.went {
+    background-color: lightblue;
+  }
+
+  .char-init,
+  .char-name {
+    font-weight: bold;
+  }
+  .char-raw-init {
+    margin-left: .5rem;
+    opacity: .7;
+  }
+
+  .tracker-table,
+  .mod-text,
+  .button .fa {
+    font-size: 1.25rem;
+  }
+
+  .override-buttons {
+    margin-top: 3rem;
+  }
+
+  .small-td {
+    width: 20%;
+  }
+  .dropdown-show {
+    visibility: visible;
+  }
+  .dropdown-pane {
+    right: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+}

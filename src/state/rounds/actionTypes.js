@@ -1,0 +1,5 @@
+export const ROUND_ADVANCE = 'ROUND_ADVANCE';
+export const ROUND_PASS_ADVANCE = 'ROUND_PASS_ADVANCE';
+export const ROUND_PAUSE = 'ROUND_PAUSE';
+export const ROUND_RESET = 'ROUND_RESET';
+export const ROUND_STOP = 'ROUND_STOP';

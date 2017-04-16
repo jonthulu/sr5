@@ -1,0 +1,11 @@
+@import "variables/_theme";
+
+#main-container {
+  &>.row {
+    max-width: 40rem;
+  }
+  .row {
+    background-color: $row-bg-color;
+    color: $row-color;
+  }
+}

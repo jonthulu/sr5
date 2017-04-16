@@ -1,0 +1,115 @@
+/* First include Foundation scss */
+@import "./_foundationSettings.scss";
+@import "foundation-sites/scss/foundation";
+
+/* Include Foundation components */
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-typography;
+@include foundation-forms;
+@include foundation-button;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+
+@import "../variables/_theme";
+@import "../mixins/_clearfix";
+
+/* Foundation Overrides */
+.callout {
+  border: 0;
+}
+
+.reveal:focus {
+  outline: 0;
+}
+
+.button{
+  span + .fa {
+    margin-left: .5rem;
+  }
+  .fa + span {
+    margin-left: .5rem;
+  }
+}
+
+table.stack {
+  // Remove the medium breakpoint for stack table.
+  @include breakpoint(medium down) {
+    thead {
+      display: table-header-group;
+    }
+    tfoot {
+      display: table-footer-group;
+    }
+    tr {
+      display: table-row;
+    }
+    th, td {
+      display: table-cell;
+      border-top: initial;
+      // If you have set a border style for your table, you might have to add it back here.
+    }
+  }
+
+  // Add a small breakpoint for stack table.
+  @include breakpoint(small down) {
+    @include table-stack;
+
+    tbody > tr {
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+    }
+    tbody > tr > td {
+      padding-bottom: 0.2rem;
+      padding-top: 0.2rem;
+    }
+
+    .stack-label {
+      display: inline-block;
+      min-width: 5rem;
+      margin-right: 1rem;
+      font-weight: bold;
+    }
+    .table-value {
+      //display: inline-block;
+      //width: calc(100% - 6rem);
+    }
+  }
+}
+
+/* Site Wide */
+.inline-text {
+  margin-right: .25em;
+}
