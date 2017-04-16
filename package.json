@@ -1,6 +1,6 @@
 {
   "name": "shadowrun-fifth-battle",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A battle tracker for shadowrun fifth edition.",
   "private": true,
   "engines": {
