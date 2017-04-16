@@ -20,7 +20,7 @@ const bundler = webpack(config);
 browserSync({
   host: '0.0.0.0',
   open: 'external',
-  port: 3060,
+  port: process.env.PORT || 3060,
   ui: {
     port: 3001,
   },
