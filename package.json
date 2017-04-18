@@ -88,6 +88,7 @@
     "open": "0.0.5",
     "postcss-loader": "0.11.0",
     "prompt": "1.0.0",
+    "pwa-manifest-webpack-plugin": "1.0.3",
     "react-addons-test-utils": "15.3.1",
     "redux-immutable-state-invariant": "2.0.0",
     "replace": "0.3.0",

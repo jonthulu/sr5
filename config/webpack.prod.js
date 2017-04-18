@@ -5,11 +5,14 @@ import webpackMerge from 'webpack-merge';
 import commonConfig from './webpack.common.js';
 import helpers from './helpers.js';
 
+import path from 'path';
+
 /**
  * Webpack Plugins
  */
 import WebpackMd5Hash from 'webpack-md5-hash';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import PwaManifestWebpackPlugin from 'pwa-manifest-webpack-plugin';
 
 /**
  * Load the ENV file before doing anything else.
@@ -72,6 +75,15 @@ export default webpackMerge(commonConfig, {
       },
       inject: true,
       // Note that you can add custom options here if you need to handle other custom logic in index.html
+    }),
+
+    new PwaManifestWebpackPlugin({
+      name: 'SR5Init',
+      description: 'Shadowrun 5th Initiative Tracker',
+      icon: {
+        src: path.resolve('src/images/appicon.png'),
+        sizes: [36, 48, 192]
+      }
     }),
 
     // Eliminate duplicate packages when generating bundle
