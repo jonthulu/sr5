@@ -87,6 +87,10 @@ export default webpackMerge(commonConfig, {
     new PwaManifestWebpackPlugin({
       name: 'SR5Init',
       description: 'Shadowrun 5th Initiative Tracker',
+      start_url: 'index.html',
+      display: 'standalone',
+      background_color: '#fff',
+      description: 'Let\'s track some SR5 initiative',
       icon: {
         src: path.resolve('src/images/appicon.png'),
         sizes: [36, 48, 192]
