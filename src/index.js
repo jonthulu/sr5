@@ -10,6 +10,12 @@ import routes from './routes';
 
 const store = configureStore();
 
+import runtime from 'serviceworker-webpack-plugin/lib/runtime';
+
+if ('serviceWorker' in navigator) {
+  runtime.register();
+}
+
 // import './styles/assets/logo-mini.png';
 
 render(

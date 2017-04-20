@@ -20,7 +20,7 @@ const ENV_FILE_PATH = path.join(__dirname, '/.env');
 // Step 1: Create/Update the .env file.
 console.log('Answer questions to save project setup information.');
 getCurrentEnvFile().then(
-  askForEnvFileDataa
+  askForEnvFileData
 ).then(
   overwriteEnvFile
 ).then(() => {
