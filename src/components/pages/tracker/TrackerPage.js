@@ -46,7 +46,7 @@ export class TicketViewPage extends React.Component {
     }
     if (prevProps.charactersHoc.anyMissingInit !== this.props.charactersHoc.anyMissingInit) {
       console.log('any missing init changed');
-      if (this.props.charactersHoc.anyMissingInit && !this.props.roundHoc.isPaused) {
+      if (this.props.charactersHoc.anyMissingInit && !this.props.roundHoc.isPaused && this.props.roundHoc.roundNumber) {
         this.props.roundHoc.roundPause();
       } else if (!this.props.charactersHoc.anyMissingInit && this.props.roundHoc.isPaused) {
         this.props.roundHoc.roundPause(true);
@@ -168,7 +168,9 @@ export class TicketViewPage extends React.Component {
   onNewCharClick = (clickEvent) => {
     clickEvent.preventDefault();
 
-    this.props.roundHoc.roundPause();
+    if (!this.props.roundHoc.isPaused && this.props.roundHoc.roundNumber) {
+      this.props.roundHoc.roundPause();
+    }
 
     if (this.state.nameModalActions) {
       this.state.nameModalActions.show();
