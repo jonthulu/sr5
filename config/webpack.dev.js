@@ -12,6 +12,7 @@ import path from 'path';
  */
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import PwaManifestWebpackPlugin from 'pwa-manifest-webpack-plugin';
+import ServiceWorkerWebpackPlugin from 'serviceworker-webpack-plugin';
 
 /**
  * Load the ENV file before doing anything else.
@@ -84,6 +85,15 @@ export default webpackMerge(commonConfig, {
         collapseWhitespace: true,
       },
       inject: true,
+    }),
+
+    new ServiceWorkerWebpackPlugin({
+      entry: path.join(__dirname, '../src/sw.js'),
+      excludes: [
+        '**/.*',
+        '**/*.map',
+        '*.html',
+      ],
     }),
 
     new PwaManifestWebpackPlugin({
