@@ -148,6 +148,13 @@ export class TicketViewPage extends React.Component {
   };
 
   /**
+   * Opens the initiative modal.
+   */
+  onChangeInitClick = () => {
+    this.state.initiativeModalActions.show();
+  };
+
+  /**
    * Triggered when the init is modified from the dropdown.
    *
    * @param {{id: string}} character
@@ -238,10 +245,18 @@ export class TicketViewPage extends React.Component {
         <div className="callout pass-display">
           <h2>{title}</h2>
         </div>
-        <button className="button secondary expanded add-char-button" onClick={this.onNewCharClick}>
-          <span>Add New Character</span>
-          <i className="fa fa-user" />
-        </button>
+        <span className="button-group expanded">
+          <button className="button secondary add-char-button" onClick={this.onNewCharClick}>
+            <span>Add New Character</span>
+            <i className="fa fa-user" />
+          </button>
+          {(roundNumber) && (
+            <button className="button warning change-init-button" onClick={this.onChangeInitClick}>
+              <span>Update Init</span>
+              <i className="fa fa-sort" />
+            </button>
+          )}
+        </span>
         <table className="stack tracker-table">
           <thead>
             <tr>
