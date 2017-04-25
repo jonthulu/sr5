@@ -31,7 +31,7 @@ const GLOBALS = {
   __DEV__: true,
 };
 
-const isSecure = Boolean(process.env.IS_SECURE);
+const isSecure = Boolean(process.env.IS_SECURE && process.env.IS_SECURE !== '0' && process.env.IS_SECURE !== 'false');
 
 export default webpackMerge(commonConfig, {
   debug: true,
