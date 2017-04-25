@@ -28,6 +28,8 @@ const GLOBALS = {
   __DEV__: true,
 };
 
+const isSecure = Boolean(process.env.IS_SECURE);
+
 export default webpackMerge(commonConfig, {
   debug: true,
 
@@ -55,7 +57,7 @@ export default webpackMerge(commonConfig, {
 
     // Use absolute paths to avoid the way that URLs are resolved by Chrome when they're parsed from a
     // dynamically loaded CSS blob. Note: Only necessary in Dev.
-    publicPath: 'https://0.0.0.0:' + process.env.PORT + '/',
+    publicPath: `http${(isSecure) ? 's' : ''}://0.0.0.0:${process.env.PORT}/`,
 
     filename: '[name].bundle.js',
 
