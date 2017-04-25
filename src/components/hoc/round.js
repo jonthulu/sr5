@@ -25,13 +25,29 @@ export default function roundHoc(WrappedComponent) {
     }
 
     /**
+     * Wraps the round pause action.
+     *
+     * @param {boolean=} unpause If true, the round is unpaused.
+     */
+    roundPause = (unpause) => {
+      const roundState = this.props.roundState;
+      if (!unpause && (roundState.isPaused || !roundState.roundNumber)) {
+        return;
+      }
+
+      this.props.roundActions.roundPause(unpause);
+    };
+
+    /**
      * Renders the WrappedComponent.
      *
      * @returns {Object}
      */
     render() {
       const newProps = {
-        roundHoc: Object.assign({}, this.props.roundActions, this.props.roundState)
+        roundHoc: Object.assign({}, this.props.roundActions, this.props.roundState, {
+          roundPause: this.roundPause,
+        })
       };
 
       return <WrappedComponent {...this.props} {...newProps} />
