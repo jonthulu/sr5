@@ -90,7 +90,7 @@
     "no-labels": 1, // Should maybe be 2.
     "no-lone-blocks": 2,
     "no-loop-func": 2,
-    "no-magic-numbers": [1, { "ignore": [-2, -1, 0, 1, 2]} ],
+    "no-magic-numbers": [0, { "ignore": [-2, -1, 0, 1, 2]} ],
     "no-multi-spaces": [1, {
       "exceptions": {
         "Property": true,
