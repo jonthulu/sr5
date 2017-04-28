@@ -3,6 +3,7 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
+import * as characterHelper from '../../services/characterHelper.js';
 import * as characterActions from '../../state/characters/actions.js';
 
 /**
@@ -45,10 +46,12 @@ export default function charactersHoc(WrappedComponent) {
 
     /**
      * Adds a coin toss value to the character.
+     *
+     * @param {number} characterId
      */
     flipCoin = (characterId) => {
       this.props.characterActions.characterUpdate(characterId, {
-        coinToss: flipCoin(),
+        coinToss: characterHelper.flipCoin(),
       });
     };
 
@@ -208,6 +211,9 @@ export default function charactersHoc(WrappedComponent) {
   CharactersHOC.propTypes = {
     // The Redux state.
     charactersState: PropTypes.object,
+    roundsState: PropTypes.shape({
+      passNumber: PropTypes.number,
+    }),
 
     // The Redux actions.
     characterActions: PropTypes.shape({

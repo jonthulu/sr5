@@ -1,0 +1,31 @@
+@import "variables/_theme";
+
+.init-actions-component {
+  background: url('../../../styles/assets/side.jpeg');
+  border: 1rem solid $color-black;
+  height: 100%;
+
+  .action-title {
+    h2 {
+      color: $color-highlight;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+  .action-buttons {
+    margin: 0.9375rem;
+  }
+
+  .button {
+    position: relative;
+
+    .fa {
+      position: absolute;
+      top: .5em;
+      left: 0;
+    }
+  }
+  .button-text {
+    margin-left: 1em;
+  }
+}

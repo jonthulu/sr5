@@ -42,6 +42,7 @@
 //  37. Top Bar
 
 @import 'foundation-sites/scss/util/util';
+@import "../variables/_theme";
 
 // 1. Global
 // ---------
@@ -50,11 +51,11 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #1779ba,
-  secondary: #767676,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #cc4b37,
+  primary: $color-header,
+  secondary: $color-main-gray,
+  success: $color-white,
+  warning: $color-highlight,
+  alert: $color-black,
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
@@ -498,11 +499,11 @@ $responsive-embed-ratios: (
 // 29. Reveal
 // ----------
 
-$reveal-background: $white;
+$reveal-background: $color-black;
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
-$reveal-padding: $global-padding;
-$reveal-border: 1px solid $medium-gray;
+$reveal-padding: 0;
+$reveal-border: 1px solid $color-black;
 $reveal-radius: $global-radius;
 $reveal-zindex: 1005;
 $reveal-overlay-background: rgba($black, 0.45);
@@ -540,7 +541,7 @@ $switch-paddle-transition: all 0.25s ease-out;
 // 32. Table
 // ---------
 
-$table-background: $white;
+$table-background: $table-row-odd-bg-color;
 $table-color-scale: 5%;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale);
 $table-padding: rem-calc(8 10 10);
@@ -548,14 +549,14 @@ $table-hover-scale: 2%;
 $table-row-hover: darken($table-background, $table-hover-scale);
 $table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
 $table-is-striped: true;
-$table-striped-background: smart-scale($table-background, $table-color-scale);
+$table-striped-background: $table-row-even-bg-color;
 $table-stripe: even;
 $table-head-background: smart-scale($table-background, $table-color-scale / 2);
 $table-head-row-hover: darken($table-head-background, $table-hover-scale);
 $table-foot-background: smart-scale($table-background, $table-color-scale);
 $table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
-$table-head-font-color: $body-font-color;
-$table-foot-font-color: $body-font-color;
+$table-head-font-color: $color-highlight;
+$table-foot-font-color: $color-highlight;
 $show-header-for-stacked: false;
 
 // 33. Tabs

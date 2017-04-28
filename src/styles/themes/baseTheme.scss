@@ -48,7 +48,11 @@
 
 /* Foundation Overrides */
 .callout {
+  background-color: $color-background-gray;
   border: 0;
+}
+.callout-transparent {
+  background-color: transparent;
 }
 
 .reveal:focus {
@@ -56,11 +60,33 @@
 }
 
 .button{
+  font-weight: bold;
+
   span + .fa {
     margin-left: .5rem;
   }
   .fa + span {
     margin-left: .5rem;
+  }
+}
+
+a {
+  color: $color-highlight;
+
+  &:hover,
+  &:focus {
+    color: darken($color-highlight, 10%);
+  }
+}
+
+table {
+  border-spacing: 0;
+  color: $color-white;
+
+  thead th {
+    border: 2px solid $color-highlight;
+    border-right: 0;
+    border-left: 0;
   }
 }
 
@@ -112,4 +138,62 @@ table.stack {
 /* Site Wide */
 .inline-text {
   margin-right: .25em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-header;
+}
+
+.char-name {
+  font-weight: bold;
+  max-width: 10rem;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.modal-header {
+  background: url('../../styles/assets/header.jpeg');
+  background-size: cover;
+  color: $color-white;
+  padding: $global-padding;
+  text-align: center;
+  text-transform: uppercase;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-highlight;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+}
+
+.modal-footer,
+.modal-body {
+  background-color: $color-white;
+  border: 2px solid $color-black;
+  color: $color-black;
+  padding: 0 1em;
+
+  label {
+    color: $color-black;
+  }
+}
+
+.modal-body {
+  border-bottom: 0;
+  padding-top: 1em;
+}
+.modal-footer {
+  border-top: 0;
+  padding-bottom: 1em;
+  padding-top: 1em;
+
+  .button-group {
+    margin-bottom: 0;
+  }
 }

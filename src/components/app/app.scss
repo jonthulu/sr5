@@ -8,5 +8,12 @@ html {
 
 body {
   background-color: $body-bg-color;
+  background: url('../../styles/assets/background3.jpeg');
+  background-repeat: repeat;
   color: $body-color;
+}
+
+#app,
+.app-wrapper {
+  height: inherit;
 }

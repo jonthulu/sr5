@@ -1,0 +1,42 @@
+@import "variables/_theme";
+
+.init-modify-list-component {
+  background-color: $color-white;
+  border: 2px solid $color-black;
+  padding: 0;
+
+  .modify-init-title {
+    background-color: $color-black;
+    border: 1px solid $color-white;
+    color: $color-highlight;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+
+    h3 {
+      color: $color-highlight;
+      font-size: 1em;
+      font-weight: bold;
+      margin-bottom: 0;
+      max-width: 14rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: .5rem 1rem;
+  }
+
+  a {
+    color: $color-black;
+  }
+
+  .modify-init-divider {
+    border-bottom: 1px solid $color-black;
+    height: 0;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+  }
+}

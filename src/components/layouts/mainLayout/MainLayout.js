@@ -26,21 +26,12 @@ export class TicketLayout extends React.Component {
         <div className="top-bar">
           <div className="top-bar-left">
             <ul className="menu">
-              <li className="menu-text">SR5</li>
-            </ul>
-          </div>
-          <div className="top-bar-right">
-            <ul className="menu">
-              <li>Item</li>
+              <li className="menu-text">SR5 Initiative Tracker</li>
             </ul>
           </div>
         </div>
         <div id="main-container" className="container" role="main">
-          <div className="row">
-            <div className="small-12">
-              {this.props.children}
-            </div>
-          </div>
+          {this.props.children}
         </div>
       </div>
     );

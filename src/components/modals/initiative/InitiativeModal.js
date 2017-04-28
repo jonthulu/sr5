@@ -108,10 +108,10 @@ export class InitiativeModal extends React.Component {
   /**
    * Submits the change request form.
    *
-   * @param {{preventDefault: function}} event
+   * @param {{preventDefault: function}} submitEvent
    */
-  submitForm = (event) => {
-    event.preventDefault();
+  submitForm = (submitEvent) => {
+    submitEvent.preventDefault();
 
     lodash.forEach(this.state.form, (value, characterId) => {
       const init = parseInt(value, 10) || 0;
@@ -144,16 +144,20 @@ export class InitiativeModal extends React.Component {
                 {lodash.map(this.props.charactersHoc.list, (character) => {
                   return (
                     <div className="row" key={character.id}>
-                      <div className="small-12 columns">
-                        <label>
-                          {character.name}
-                          <input
-                            type="number"
-                            placeholder="Init Value"
-                            value={this.state.form[character.id]}
-                            onChange={this.updateForm(character.id)}
-                          />
-                        </label>
+                      <div className="small-3 columns">
+                        <label
+                          htmlFor={`char-${character.id}`}
+                          className="char-name text-right middle"
+                        >{character.name}</label>
+                      </div>
+                      <div className="small-9 columns">
+                        <input
+                          id={`char-${character.id}`}
+                          type="number"
+                          placeholder="Init Value"
+                          value={this.state.form[character.id]}
+                          onChange={this.updateForm(character.id)}
+                        />
                       </div>
                     </div>
                   );
@@ -164,7 +168,7 @@ export class InitiativeModal extends React.Component {
               <div className="button-group large expanded">
                 <button
                   type="button"
-                  className="button secondary"
+                  className="button alert"
                   onClick={this.closeModal}
                 >Cancel</button>
 

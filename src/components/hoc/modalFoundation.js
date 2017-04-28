@@ -89,7 +89,7 @@ export default function modalFoundationInit(modalId, modalOptions) {
        * Initializes the modal with foundation modal options.
        */
       initModal = () => {
-        new Foundation.Reveal(this.getModal(), this.parseOptions()); // eslint-disable-line no-new
+        new Foundation.Reveal(this.getModal(), this.parseOptions()); // eslint-disable-line no-new,no-undef
       };
 
       /**

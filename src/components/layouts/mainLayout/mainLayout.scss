@@ -1,8 +1,16 @@
 @import "variables/_theme";
 
+.top-bar {
+  background: url('../../../styles/assets/header.jpeg');
+  background-size: cover;
+}
+.top-bar ul {
+  background: transparent;
+}
+
 #main-container {
   &>.row {
-    max-width: 40rem;
+    max-width: 60rem;
   }
   .row {
     background-color: $row-bg-color;

@@ -1,0 +1,17 @@
+@import "variables/_theme";
+
+#modify-init-modal {
+  .modify-init-divider {
+    border-bottom: 1px solid $color-black;
+    height: 0;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  .moves-list {
+    list-style-type: none;
+    margin: 0;
+    padding: .5rem 1rem;
+    text-align: center;
+  }
+}

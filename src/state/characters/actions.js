@@ -1,3 +1,5 @@
+/* eslint-disable complexity */
+
 import lodash from 'lodash';
 
 import * as types from './actionTypes.js';
@@ -15,7 +17,6 @@ function parseUpdateData(data) {
   if (data.init !== undefined) {
     const safeInit = parseInt(data.init, 10);
     if (isNaN(safeInit)) {
-      console.log('before error', data, safeInit);
       throw new Error('CharacterUpdateAction: Non-number initiative value given.');
     }
     safeData.init = safeInit;
@@ -187,6 +188,6 @@ export function characterUpdateSome(charactersData) {
 
   return {
     type: types.CHARACTER_UPDATE_SOME,
-    charsData: parseUpdateData(data),
+    charsData: parseUpdateData(charactersData),
   };
 }

@@ -3,33 +3,55 @@
 .tracker-page {
   .pass-display {
     margin-bottom: 0;
-    text-align: center;
+    text-transform: uppercase;
 
     h2 {
+      color: $color-highlight;
       font-size: 2rem;
+      font-weight: bold;
     }
   }
 
   tr.active {
-    background-color: lightyellow;
+    background-color: $color-white;
+    color: $color-black;
   }
   tr.went {
-    background-color: lightblue;
+    opacity: .6;
   }
 
-  .char-init,
-  .char-name {
+  .char-init {
+    display: inline-block;
     font-weight: bold;
+    max-width: 10rem;
+    word-wrap: break-word;
+  }
+  .char-name {
+    display: inline-block;
   }
   .char-raw-init {
     margin-left: .5rem;
     opacity: .7;
+  }
+  .character-actions {
+    position: relative;
+  }
+  .character-action-set {
+    min-width: 120px;
   }
 
   .tracker-table,
   .mod-text,
   .button .fa {
     font-size: 1.25rem;
+  }
+
+  .tracker-table {
+    text-transform: uppercase;
+  }
+
+  .mod-box-stat {
+    font-weight: bold;
   }
 
   .override-buttons {
@@ -45,8 +67,5 @@
   .dropdown-pane {
     right: 0;
 
-    li {
-      list-style: none;
-    }
   }
 }

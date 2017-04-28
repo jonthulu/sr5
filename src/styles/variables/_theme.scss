@@ -1,42 +1,39 @@
 /*=== Colors ===*/
 
 /* Whites/Grays/Blacks */
-$color-white: #ffffff;
-$color-link-water: #E4EEF6;
-$color-gallery: #ececec;
-$color-porcelain: #ecf0f1;
-$color-alto: #dddddd;
-$color-nobel: #b6b6b6;
-$color-dove-gray: #696969;
-$color-mine-shaft: #393939;
 
-/* Blues */
-$color-scooter: #33B6D4;
-$color-curious-blue: #197ED6;
+
+$color-white: #ffffff;
+$color-main-gray: #59595B;
+$color-background-gray: #E8E8E8;
+$color-text-black: #464243;
+$color-black: #222527;
+
+/* Reds */
+$color-header: #7E0F12;
+
+/* Yellows, Oranges */
+$color-highlight: #E6AE30;
 
 /*=== Theme Colors ===*/
 
-/* General */
-$main-accent: $color-scooter;
-$main-white: $color-white;
-
 /* Body */
-$body-bg-color: $color-porcelain;
-$body-color: $color-dove-gray;
+$body-bg-color: $color-black;
+$body-color: $color-white;
 
 /* Row */
-$row-bg-color: $color-white;
-$row-color: $color-dove-gray;
+$row-bg-color: $color-black;
+$row-color: $color-white;
+
+/* Table */
+$table-row-odd-bg-color: $color-black;
+$table-row-even-bg-color: $color-main-gray;
+$table-highlight: $color-highlight;
 
 /* Banners */
-$line-item-top-bg-color: $color-curious-blue;
-$line-item-top-color: $color-white;
-
-$line-item-highlight-bg-color: $color-link-water;
-$line-item-highlight-color: $color-dove-gray;
-
 $error-banner-bg-color: $color-white;
-$error-banner-color: $color-mine-shaft;
+$error-banner-color: $color-header;
 
 $loading-banner-bg-color: $color-white;
-$loading-banner-color: $color-dove-gray;
+$loading-banner-color: $color-text-black;
+

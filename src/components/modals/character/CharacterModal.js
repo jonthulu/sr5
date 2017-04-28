@@ -119,10 +119,10 @@ export class CharacterModal extends React.Component {
   /**
    * Submits the change request form.
    *
-   * @param {{preventDefault: function}} event
+   * @param {{preventDefault: function}} submitEvent
    */
-  submitForm = (event) => {
-    event.preventDefault();
+  submitForm = (submitEvent) => {
+    submitEvent.preventDefault();
 
     const values = lodash.values(this.state.form);
     if (lodash.filter(values).length !== values.length) {
@@ -216,7 +216,7 @@ export class CharacterModal extends React.Component {
               <div className="button-group large expanded">
                 <button
                   type="button"
-                  className="button secondary"
+                  className="button alert"
                   onClick={this.closeModal}
                 >Cancel</button>
 

@@ -1,2 +1,3 @@
 tmp/*
 src/styles/assets
+src/sw.js
