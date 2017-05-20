@@ -61,7 +61,7 @@ export default webpackMerge(commonConfig, {
 
     // Use absolute paths to avoid the way that URLs are resolved by Chrome when they're parsed from a
     // dynamically loaded CSS blob. Note: Only necessary in Dev.
-    publicPath: `http${(isSecure) ? 's' : ''}://0.0.0.0:${process.env.PORT}/`,
+    publicPath: `http${(isSecure) ? 's' : ''}://localhost:${process.env.PORT || 3060}/`,
 
     filename: '[name].bundle.js',
 
@@ -93,7 +93,7 @@ export default webpackMerge(commonConfig, {
         '**/.*',
         '**/*.map',
         '*.html',
-      ],
+      ]
     }),
 
     new PwaManifestWebpackPlugin({

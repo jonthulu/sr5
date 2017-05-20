@@ -3,7 +3,7 @@ import lodash from 'lodash';
 
 import * as types from './actionTypes.js';
 import * as roundsTypes from '../rounds/actionTypes.js';
-import {flipCoin} from '../../services/characterHelper.js';
+import { flipCoin } from '../../services/characterHelper.js';
 
 export const initialState = {
   characters: {
@@ -33,9 +33,22 @@ export const initialState = {
       rawInit: null,
       wentThisPass: false,
     },
-    mous: {
-      id: 'mous',
-      name: 'Mous',
+    dog: {
+      id: 'dog',
+      name: 'Dog',
+      mod: 0,
+      edge: 1,
+      reaction: 3,
+      intuition: 4,
+      coinToss: null,
+      init: null,
+      modlessInit: null,
+      rawInit: null,
+      wentThisPass: false,
+    },
+    maus: {
+      id: 'maus',
+      name: 'Maus',
       mod: 0,
       edge: 3,
       reaction: 4,
