@@ -46,7 +46,7 @@ export default webpackMerge(commonConfig, {
   output: {
     path: helpers.root('dist'),
     publicPath: '/',
-    filename: 'bundle.js',
+    filename: 'bundle.[hash].js',
   },
   plugins: [
     // Hash the files using MD5 so that their names change when the content changes.
